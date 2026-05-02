@@ -94,6 +94,23 @@ app.post('/api/progress/:userId/reset', (req, res) => {
   res.json({ ...DEFAULT_PROGRESS })
 })
 
+app.get('/api/stats', (_req, res) => {
+  const users = getUsers.all()
+  const stats = users.map((user) => {
+    const row = getProgress.get(user.id)
+    const p = rowToProgress(row)
+    return {
+      id: user.id,
+      name: user.name,
+      emoji: user.emoji,
+      xp: p.xp,
+      streak: p.streak,
+      completedCount: p.completedLessons.length,
+    }
+  })
+  res.json(stats)
+})
+
 // --- Serve React build in production ---
 if (isProd) {
   const distPath = join(__dirname, '../dist')

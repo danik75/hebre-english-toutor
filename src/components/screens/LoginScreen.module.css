@@ -70,27 +70,6 @@
   text-align: center;
 }
 
-.deleteBtn {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  background: transparent;
-  color: var(--color-text-light);
-  font-size: 0.8rem;
-  padding: 2px 6px;
-  border-radius: 6px;
-  opacity: 0;
-  transition: opacity 0.15s, background 0.15s;
-}
-
-.profileCard:hover .deleteBtn {
-  opacity: 1;
-}
-
-.deleteBtn:hover {
-  background: var(--color-wrong);
-  color: #fff;
-}
 
 .addCard {
   background: transparent;
@@ -248,4 +227,144 @@
 .createBtn:not(:disabled):active {
   transform: translateY(3px);
   box-shadow: none;
+}
+
+/* Dashboard */
+
+.dashboard {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px 20px;
+  width: 100%;
+}
+
+.dashboardTitle {
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--color-text);
+}
+
+.dashboardTable {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboardRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+.dashboardRank {
+  font-size: 1.1rem;
+  min-width: 28px;
+  text-align: center;
+}
+
+.dashboardEmoji {
+  font-size: 1.4rem;
+}
+
+.dashboardName {
+  font-weight: 800;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.dashboardLevel {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+  min-width: 44px;
+  text-align: center;
+}
+
+.dashboardXp {
+  font-weight: 700;
+  min-width: 54px;
+  text-align: center;
+}
+
+.dashboardStreak {
+  font-weight: 700;
+  min-width: 44px;
+  text-align: center;
+}
+
+.dashboardLessons {
+  font-weight: 700;
+  min-width: 44px;
+  text-align: center;
+}
+
+/* Admin */
+
+.adminRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.adminBtn {
+  background: transparent;
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  font-family: var(--font-hebrew);
+  transition: background 0.15s, color 0.15s;
+}
+
+.adminBtn:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.adminExitBtn {
+  background: var(--color-wrong);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: none;
+  font-family: var(--font-hebrew);
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: var(--color-wrong);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 7px;
+  border-radius: 6px;
+  opacity: 1;
+  font-weight: 700;
+}
+
+.deleteBtn:hover {
+  background: #cc0000;
+}
+
+.inputError {
+  border-color: var(--color-wrong) !important;
+}
+
+.errorMsg {
+  color: var(--color-wrong);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
 }
