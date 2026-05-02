@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.instruction {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.hebrewSentence {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: var(--color-card);
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.placedArea {
+  min-height: 60px;
+  width: 100%;
+  max-width: 500px;
+  background: var(--color-card);
+  border: 3px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  direction: ltr;
+}
+
+.placeholder {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: center;
+  direction: rtl;
+}
+
+.placedTile {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 0 var(--color-primary-dark);
+  transition: transform 0.1s;
+}
+
+.placedTile:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.bankArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 500px;
+  direction: ltr;
+}
+
+.bankTile {
+  background: var(--color-card);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.bankTile:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  background: #f0f9ff;
+}
+
+.bankTile:disabled {
+  opacity: 0.5;
+}
+
+.checkBtn {
+  background: var(--color-correct);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 14px 40px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 3px 0 var(--color-correct-dark);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.checkBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.checkBtn:not(:disabled):active {
+  transform: translateY(3px);
+  box-shadow: none;
+}

@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+.instruction {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tile {
+  border-radius: var(--radius-sm);
+  padding: 14px 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, background 0.15s, opacity 0.2s;
+  min-height: 56px;
+  border: 3px solid var(--color-border);
+  background: var(--color-card);
+}
+
+.hebrewTile {
+  font-family: var(--font-hebrew);
+}
+
+.englishTile {
+  font-family: var(--font-english);
+}
+
+.tile.idle:hover {
+  border-color: var(--color-primary);
+  background: #f0f9ff;
+}
+
+.selected {
+  border-color: var(--color-primary) !important;
+  background: #dff0ff !important;
+}
+
+.matched {
+  background: #d7ffb8 !important;
+  border-color: var(--color-correct) !important;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.wrong {
+  background: #ffdfe0 !important;
+  border-color: var(--color-wrong) !important;
+}

@@ -1,0 +1,251 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.loadingDots {
+  font-size: 2rem;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.profileCard {
+  position: relative;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 24px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--color-border);
+  min-width: 130px;
+  transition: border-color 0.15s;
+}
+
+.profileCard:hover {
+  border-color: var(--color-primary);
+}
+
+.profileEmoji {
+  font-size: 3.5rem;
+}
+
+.profileName {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: transparent;
+  color: var(--color-text-light);
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.profileCard:hover .deleteBtn {
+  opacity: 1;
+}
+
+.deleteBtn:hover {
+  background: var(--color-wrong);
+  color: #fff;
+}
+
+.addCard {
+  background: transparent;
+  border: 3px dashed var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  min-width: 130px;
+  transition: border-color 0.15s, background 0.15s;
+  font-family: var(--font-hebrew);
+}
+
+.addCard:hover {
+  border-color: var(--color-primary);
+  background: #f0f9ff;
+}
+
+.addIcon {
+  font-size: 2.5rem;
+  color: var(--color-text-light);
+}
+
+.addLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+}
+
+/* Modal */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 200;
+}
+
+.modal {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nameInput {
+  padding: 14px 16px;
+  font-size: 1.2rem;
+  font-family: var(--font-hebrew);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.15s;
+  text-align: right;
+}
+
+.nameInput:focus {
+  border-color: var(--color-primary);
+}
+
+.emojiLabel {
+  font-weight: 700;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.emojiGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 6px;
+}
+
+.emojiOption {
+  font-size: 1.5rem;
+  padding: 6px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: transparent;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.emojiOption:hover {
+  background: var(--color-bg);
+}
+
+.emojiSelected {
+  border-color: var(--color-primary);
+  background: #dff0ff;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.cancelBtn {
+  flex: 1;
+  padding: 13px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-border);
+  background: transparent;
+  font-family: var(--font-hebrew);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text-light);
+}
+
+.cancelBtn:hover {
+  border-color: var(--color-text-light);
+  color: var(--color-text);
+}
+
+.createBtn {
+  flex: 2;
+  padding: 13px;
+  border-radius: var(--radius-sm);
+  background: var(--color-correct);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: 0 3px 0 var(--color-correct-dark);
+  transition: transform 0.1s, box-shadow 0.1s;
+  font-family: var(--font-hebrew);
+}
+
+.createBtn:disabled {
+  opacity: 0.4;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.createBtn:not(:disabled):active {
+  transform: translateY(3px);
+  box-shadow: none;
+}

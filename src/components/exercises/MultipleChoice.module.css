@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.instruction {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.wordDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 24px 40px;
+  box-shadow: var(--shadow);
+  min-width: 200px;
+}
+
+.emoji {
+  font-size: 4rem;
+}
+
+.hebrewWord {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.option {
+  background: var(--color-card);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 16px 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, background 0.15s;
+  min-height: 60px;
+}
+
+.option:hover:not(.correct):not(.wrong):not(.dimmed) {
+  border-color: var(--color-primary);
+  background: #f0f9ff;
+}
+
+.correct {
+  background: #d7ffb8;
+  border-color: var(--color-correct);
+  color: var(--color-correct-dark);
+}
+
+.wrong {
+  background: #ffdfe0;
+  border-color: var(--color-wrong);
+  color: var(--color-wrong-dark);
+}
+
+.dimmed {
+  opacity: 0.4;
+}

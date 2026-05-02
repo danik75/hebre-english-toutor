@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+.instruction {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.wordDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 20px 40px;
+  box-shadow: var(--shadow);
+}
+
+.emoji {
+  font-size: 3.5rem;
+}
+
+.hebrewWord {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.letterGuide {
+  display: flex;
+  gap: 6px;
+  direction: ltr;
+}
+
+.letterBox {
+  width: 28px;
+  height: 36px;
+  border-bottom: 3px solid var(--color-text-light);
+  display: inline-block;
+}
+
+.inputRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 1.3rem;
+  font-family: var(--font-english);
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-card);
+  outline: none;
+  text-align: left;
+  direction: ltr;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+.checkBtn {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 14px 22px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 3px 0 var(--color-primary-dark);
+  transition: transform 0.1s, box-shadow 0.1s;
+  white-space: nowrap;
+}
+
+.checkBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.checkBtn:not(:disabled):active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.attemptsLeft {
+  font-size: 0.9rem;
+  color: var(--color-wrong);
+  font-weight: 600;
+}
+
+.revealBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #fff3cd;
+  border-radius: var(--radius-sm);
+  padding: 20px 32px;
+  border: 2px solid #ffc107;
+}
+
+.revealLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.revealWord {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+}

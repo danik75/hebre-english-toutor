@@ -1,0 +1,15 @@
+.bar {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.full {
+  font-size: 1.3rem;
+  filter: none;
+}
+
+.empty {
+  font-size: 1.3rem;
+  filter: grayscale(1) opacity(0.3);
+}
